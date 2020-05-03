@@ -7,7 +7,7 @@ node {
     def SF_CONSUMER_KEY=env.SF_CONSUMER_KEY
     def SF_USERNAME=env.SF_USERNAME
     def SERVER_KEY_CREDENTALS_ID=env.SERVER_KEY_CREDENTALS_ID
-    //def TEST_LEVEL='RunLocalTests'
+    def TEST_LEVEL='RunLocalTests'
     //def PACKAGE_NAME='0Ho1U000000CaUzSAK'
     //def PACKAGE_VERSION
     def SF_INSTANCE_URL = env.SF_INSTANCE_URL
@@ -15,10 +15,12 @@ node {
     def toolbelt = tool 'toolbelt'
 
     println 'KEY IS' 
+    println TEST_LEVEL
     println SF_CONSUMER_KEY
     println SF_USERNAME
     println SERVER_KEY_CREDENTALS_ID
     println SF_INSTANCE_URL
+    println 'Printing is done' 
 
 
     // -------------------------------------------------------------------------
