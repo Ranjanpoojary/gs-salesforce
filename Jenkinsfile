@@ -20,6 +20,7 @@ node {
     println SF_USERNAME
     println SERVER_KEY_CREDENTALS_ID
     println SF_INSTANCE_URL
+    println toolbelt
     println 'Printing is done' 
 
 
