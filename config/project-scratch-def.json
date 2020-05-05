@@ -1,5 +1,7 @@
 {
-  "orgName": "mamataranjan company",
-  "edition": "Developer",
-  "features": []
+    "orgName": "Enterprise",
+    "edition": "Enterprise",
+    "orgPreferences" : {
+        "enabled": ["S1DesktopEnabled"]
+    }
 }
