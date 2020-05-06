@@ -57,7 +57,10 @@ node {
                 if (isUnix()) {
                     rmsg = sh returnStdout: true, script: "${toolbelt} force:mdapi:deploy -d manifest/. -u ${SF_USERNAME}"
                 }else{
-                    rmsg = bat returnStdout: true, script: "\"C:\\Program Files (x86)\\Salesforce CLI\\bin\\sfdx\" force:source:deploy --manifest manifest/package.xml -u ${SF_USERNAME}"
+                   
+                    
+                    rmsg = bat returnStdout: true, script: "\"C:\\Program Files (x86)\\Salesforce CLI\\bin\\sfdx\" force:auth:logout --targetusername ${SF_USERNAME} -p & sfdx force:auth:jwt:grant --clientid ${SF_CONSUMER_KEY} --instanceurl ${SF_USERNAME} --username ${SF_USERNAME} --jwtkeyfile \"${server_key_file}\" & \"C:\\Program Files (x86)\\Salesforce CLI\\bin\\sfdx\" force:source:deploy --manifest manifest/package.xml -u ${SF_USERNAME}"
+                    //rmsg = bat returnStdout: true, script: "\"C:\\Program Files (x86)\\Salesforce CLI\\bin\\sfdx\" force:source:deploy --manifest manifest/package.xml -u ${SF_USERNAME}"
                 }
                 
                 printf rmsg
