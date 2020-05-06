@@ -57,7 +57,7 @@ node {
                 if (isUnix()) {
                     rmsg = sh returnStdout: true, script: "${toolbelt} force:mdapi:deploy -d manifest/. -u ${SF_USERNAME}"
                 }else{
-                    rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:source:deploy --manifest manifest/package.xml -u ${SF_USERNAME}"
+                    rmsg = bat returnStdout: true, script: "\"C:\\Program Files (x86)\\Salesforce CLI\\bin\\sfdx\" force:source:deploy --manifest manifest/package.xml -u ${SF_USERNAME}"
                 }
                 
                 printf rmsg
